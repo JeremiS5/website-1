@@ -63,9 +63,9 @@ $(window).on('scroll',function(){
     // we round here to reduce a little workload
     stop = Math.round($(window).scrollTop());
     if (stop > mainbottom) {
-        $('.nav').addClass('past-main');
+        $('.navbar').addClass('past-main');
     } else {
-        $('.nav').removeClass('past-main');
+        $('.navbar').removeClass('past-main');
    }
 
 });
