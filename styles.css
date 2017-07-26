@@ -72,17 +72,16 @@
 
 .container,
 .container-fluid {
-    background-color: #66ff66;
+    background-image:url(img/bg/topography.png);
+    background-attachment: fixed;
     padding-left: 0px !important;
     padding-right: 0px !important;
-    margin-bottom: 720px;
-    height: 100%;
+    margin-bottom: 100vh;
 }
 
 [class*="col-"] {
     padding-top: 15px;
     padding-bottom: 15px;
-    height: auto;
 }
 
 .col-md-12 {
@@ -90,14 +89,16 @@
 }
 
 .contentpage {
-    min-height: 100vh;
-    max-height: 100%;
-    height: auto;
+    min-height: 70vh;
+    max-height: auto;
     width: 80%;
     margin: auto;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
     background-color: #f9f9f9;
     border-left: 20px solid #FF4B3B;
     border-right: 20px solid #FF4B3B;
+    border-bottom: 20px solid #FF4B3B;
 }
 
 /* END GENERAL STYLES */
@@ -112,9 +113,9 @@
 }
 
 h1 {
-    font-family: 'Marriweather Sans', sans-serif;
-    font-size: 6em;
-    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5em;
+    font-weight: 800;
     color: #efefef;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
     margin-top: 0;
@@ -123,7 +124,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 2em;
     font-weight: 300;
     letter-spacing: 3pt;
@@ -141,10 +142,6 @@ li a:hover {
     border-bottom: 1px solid white;
 }
 
-.cmyk {
-    text-shadow: 0.25rem -0.25rem 0.0rem rgba(255, 0, 255, 0.75), -0.25rem -0.25rem 0.0rem rgba(0, 255, 255, 0.75), 0 0.5rem 0.0rem rgba(255, 255, 0, 0.75);
-}
-
 .opinion {
     font-size: 0.8em;
     padding-bottom: 5px;
@@ -154,6 +151,11 @@ li a:hover {
     border-right: 5px solid #FF4B3B;
     padding-left: 10px;
     width: 100%;
+}
+
+h2 a {
+    color: white;
+    text-decoration: none;
 }
 
 /* end text styles */
@@ -176,9 +178,25 @@ li a:hover {
 }
 
 .navbar-fixed-top .navbar-nav>li>a:hover {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
+}
+
+.navbar-fixed-top .navbar-nav>li>a:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.nav .open>a, .nav .open>a:focus{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.dropdown-menu, .dropdown-menu>li>a {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: white;
 }
 
 .navbar-header {
@@ -223,7 +241,7 @@ li a:hover {
 }
 
 .navbar.past-main .input-group {
-    width: 50%;
+    width: 49%;
 }
 
 .nav-up {
@@ -275,10 +293,19 @@ li {
     box-shadow: none;
     border-radius: 0px;
     height: 50px;
+    color: white;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #ccc;
 }
 
 .input-group {
-    width: 65%;
+    width: 63%;
     top: 0px;
     height: 100%;
     padding: 0;
@@ -291,29 +318,27 @@ li {
 
 /* HERO/COVER PAGE */
 
-.parallax {
+#parallax {
     /* background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent; */
     overflow: hidden;
     height: 100vh;
+    z-index: 10;
 }
 
 .parallaximg {
-    filter: brightness(50%);
+    filter: brightness(50%) blur(3px) contrast(80%);
     position: relative;
     width: 100%;
 }
-
-
-/*header in hero */
 
 .mainhead {
     color: #fff;
     /* text-shadow: 3px 5px #FF4B3B, 6px 5px #3befff, 10px 10px 10px rgba(0,0,0,0.5); */
     text-shadow: 3px 3px #FF4B3B, 10px 10px 10px rgba(0, 0, 0, 0.5);
-    font-size: 4em;
+    font-size: 6em;
     line-height: 1em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
@@ -323,32 +348,25 @@ li {
     /*animation: 1s linear 0s fadeIn;*/
 }
 
-
-/* end header */
-
-
-/* caption in header */
-
 .imgtxt {
     position: absolute;
-    top: 55%;
-    letter-spacing: 3pt;
+    top: 50%;
+    letter-spacing: .5em;
     color: white;
     font-size: 18pt;
     background-color: rgba(0, 0, 0, 0.0);
+    text-shadow: 5px 5px 10px rgba(0,0,0,1)
+    
     /*border-right: 15px solid #FF4B3B;*/
     /* box-shadow: 10px 10px 10px rgba(0,0,0,0.5); */
 }
-
-
-/* end caption*/
 
 
 /* SCROLL INDICATOR */
 
 .chevcont {
     position: absolute;
-    top: 85vh;
+    top: 90vh;
     left: 50%;
     width: 24px;
     height: 24px;
@@ -415,7 +433,7 @@ li {
     display: block;
     margin-top: 75px;
     margin-left: -30px;
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: "Open Sans" sans-serif;
     font-size: 12px;
     color: #fff;
     text-transform: uppercase;
@@ -450,13 +468,13 @@ header {
     padding: 1% 1% 1%;
     /*position: absolute;*/
     width: 100%;
-    /*clip-path: polygon(
+    clip-path: polygon(
     0 0,
-    200% -0%,
-    50% 60%,
-    0% 40%
+    300% -0%,
+    50% 100%,
+    0% 80%
     );
-    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 
@@ -482,9 +500,6 @@ clip-path: polygon(
 body {
     background-color: #eee;
     /*position: absolute;*/
-    font-family: 'PT Sans', sans-serif;
-    font-size: 16px;
-    color: #666;
     z-index: 1;
 }
 
@@ -493,6 +508,9 @@ body {
     line-height: 1.5em;
     letter-spacing: 0.5pt;
     z-index: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    padding: 3em;
 }
 
 .blockquote {
@@ -571,7 +589,8 @@ footer {
     width: 100%;
     z-index: -10;
     /*background: #222425;*/
-    background-image: url("img/bg/footer_lodyas.png");
+    background-image: url("img/bg/lozenge.png");
+    background-attachment: fixed;
     padding-right: 80px;
     padding-left: 80px;
     height: 100vh;
@@ -583,7 +602,7 @@ footer {
 }
 
 .logo {
-    margin-top: 300px;
+    margin-top: 40vh;
     margin-bottom: 20px;
     text-align: center;
     color: #fff;
@@ -591,8 +610,8 @@ footer {
 
 .tagline {
     font-size: 54px;
-    font-weight: 200;
-    font-family: "PT Sans", sans-serif;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
 }
 
 .tagline span {
@@ -602,8 +621,15 @@ footer {
 .logo p {
     margin-top: 0px;
     margin-bottom: 20px;
-    font-family: "PT Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
+.contact a {
+    color: white;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
 
 /* END FOOTER */
