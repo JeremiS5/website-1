@@ -76,7 +76,15 @@
     background-attachment: fixed;
     padding-left: 0px !important;
     padding-right: 0px !important;
+    position: fixed;
+    top: 0;
+    z-index: 5;
     margin-bottom: 100vh;
+}
+
+.body {
+    position: relative;
+    height: 100% !important;
 }
 
 [class*="col-"] {
@@ -89,7 +97,7 @@
 }
 
 .contentpage {
-    min-height: 70vh;
+    min-height: 60vh;
     max-height: auto;
     width: 80%;
     margin: auto;
@@ -103,6 +111,148 @@
 
 /* END GENERAL STYLES */
 
+/* HERO/COVER PAGE */
+
+#parallax {
+    /* background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent; */
+    overflow: hidden;
+    height: 100vh;
+    z-index: 10;
+    margin-bottom: 100vh;
+}
+
+.parallaximg {
+    filter: brightness(50%) blur(3px) contrast(80%);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.mainhead {
+    color: #fff;
+    /* text-shadow: 3px 5px #FF4B3B, 6px 5px #3befff, 10px 10px 10px rgba(0,0,0,0.5); */
+    text-shadow: 3px 3px #FF4B3B, 10px 10px 10px rgba(0, 0, 0, 0.5);
+    font-size: 5em;
+    line-height: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    /*animation: 1s linear 0s fadeIn;*/
+}
+
+.imgtxt {
+    letter-spacing: .5em;
+    color: white;
+    font-size: 18pt;
+    background-color: rgba(0, 0, 0, 0.0);
+    text-shadow: 5px 5px 10px rgba(0,0,0,1);
+    margin-top: 20px;
+    /*border-right: 15px solid #FF4B3B;*/
+    /* box-shadow: 10px 10px 10px rgba(0,0,0,0.5); */
+}
+
+.parawrap {
+    z-index: 11;
+    position: absolute;
+    top: 40%;
+}
+
+
+/* SCROLL INDICATOR */
+
+.chevcont {
+    position: absolute;
+    top: 85vh;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    z-index: 30;
+}
+
+.chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+}
+
+.chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+    25% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+
+.text {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Open Sans" sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* END SCROLL INDICATOR */
+
+
+/* END HERO/COVER PAGE*/
 
 /* text styles */
 
@@ -316,146 +466,6 @@ li {
 /* END NAVBAR */
 
 
-/* HERO/COVER PAGE */
-
-#parallax {
-    /* background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent; */
-    overflow: hidden;
-    height: 100vh;
-    z-index: 10;
-}
-
-.parallaximg {
-    filter: brightness(50%) blur(3px) contrast(80%);
-    position: relative;
-    width: 100%;
-}
-
-.mainhead {
-    color: #fff;
-    /* text-shadow: 3px 5px #FF4B3B, 6px 5px #3befff, 10px 10px 10px rgba(0,0,0,0.5); */
-    text-shadow: 3px 3px #FF4B3B, 10px 10px 10px rgba(0, 0, 0, 0.5);
-    font-size: 5em;
-    line-height: 1em;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    /*animation: 1s linear 0s fadeIn;*/
-}
-
-.imgtxt {
-    letter-spacing: .5em;
-    color: white;
-    font-size: 18pt;
-    background-color: rgba(0, 0, 0, 0.0);
-    text-shadow: 5px 5px 10px rgba(0,0,0,1);
-    margin-top: 20px;
-    /*border-right: 15px solid #FF4B3B;*/
-    /* box-shadow: 10px 10px 10px rgba(0,0,0,0.5); */
-}
-
-.parawrap {
-    z-index: 10;
-    position: absolute;
-    top: 40%;
-}
-
-
-/* SCROLL INDICATOR */
-
-.chevcont {
-    position: absolute;
-    top: 85vh;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    z-index: 30;
-}
-
-.chevron {
-    position: absolute;
-    width: 28px;
-    height: 8px;
-    opacity: 0;
-    transform: scale3d(0.5, 0.5, 0.5);
-    animation: move 3s ease-out infinite;
-}
-
-.chevron:first-child {
-    animation: move 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-    animation: move 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 51%;
-    background: #fff;
-}
-
-.chevron:before {
-    left: 0;
-    transform: skew(0deg, 30deg);
-}
-
-.chevron:after {
-    right: 0;
-    width: 50%;
-    transform: skew(0deg, -30deg);
-}
-
-@keyframes move {
-    25% {
-        opacity: 1;
-    }
-    33% {
-        opacity: 1;
-        transform: translateY(30px);
-    }
-    67% {
-        opacity: 1;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-    }
-}
-
-.text {
-    display: block;
-    margin-top: 75px;
-    margin-left: -30px;
-    font-family: "Open Sans" sans-serif;
-    font-size: 12px;
-    color: #fff;
-    text-transform: uppercase;
-    white-space: nowrap;
-    opacity: .25;
-    animation: pulse 2s linear alternate infinite;
-}
-
-@keyframes pulse {
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* END SCROLL INDICATOR */
-
-
-/* END HERO/COVER PAGE*/
-
-
 /* MAIN TEXT SECTIONS */
 
 
@@ -497,12 +507,6 @@ clip-path: polygon(
 
 
 /* BODY TEXT */
-
-body {
-    background-color: #eee;
-    /*position: absolute;*/
-    z-index: 1;
-}
 
 .bodypg {
     /*margin-top: 13%;*/
@@ -595,11 +599,6 @@ footer {
     padding-right: 80px;
     padding-left: 80px;
     height: 100vh;
-    -webkit-transform: translateZ(0px);
-    -moz-transform: translateZ(0px);
-    -ms-transform: translateZ(0px);
-    -o-transform: translateZ(0px);
-    transform: translateZ(0px);
 }
 
 .logo {
