@@ -16,7 +16,8 @@
 
     <!-- Custom styles -->
     <link href="theme.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
@@ -39,6 +40,7 @@
 
 
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <nav class="navbar navbar-fixed-top nav-down">
 
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -93,7 +95,7 @@
     </nav>
 
     <div id="parallax">
-        <img src="img/console.jpg" class="rellax parallaximg" data-rellax-speed="6">
+        <img src="img/console.jpg" class="rellax parallaximg" data-rellax-speed="4">
 
         <div class="parawrap col-md-10 col-md-offset-1 text-center">
             <p class="mainhead">
@@ -101,7 +103,7 @@
             </p>
 
             <p class="imgtxt">
-                IT U4 SAT by Jeremy van Nispen-Struhs
+                IT U4 SAT by Jeremy 
             </p>
         </div>
         
@@ -120,18 +122,19 @@
                 <div class="col-md-12">
                     <header>
                         <h1>Summary</h1>
-                        <h2><a href="#parallax">Back to top</a></h2>
+                        <h2><a href="#top">Back to top</a></h2>
                     </header>
                 </div>
 
-                <div class="col-md-8 col-md-offset-2 bodypg">I studied many articles and case studies to determine the benefits that playing video games can have on the brain.<br><br>
+                <div class="col-md-8 col-md-offset-2 bodypg">I chose to study the benefits that playing video games can have on the human brain. I chose this topic because I’m interested in it, and because I believe that playing video games can have substantial benefits. I also wanted to refute biases by providing information. I searched Google Scholar to find scientific studies related to my topic. I also watched several TED talks and read newspaper articles. <br><br>
                 </div>
+                <div class="clearfix"></div>
             </section>
             <section class="contentpage" id="page2">
                 <div class="col-md-12" >
                     <header>
                         <h1>Hypothesis</h1>
-                        <h2><a href="#parallax">Back to top</a></h2>
+                        <h2><a href="#top">Back to top</a></h2>
                     </header>
                 </div>
 
@@ -144,7 +147,7 @@
                 <div class="col-md-12" >
                     <header>
                         <h1>Scope</h1>
-                        <h2><a href="#parallax">Back to top</a></h2>
+                        <h2><a href="#top">Back to top</a></h2>
                     </header>
                 </div>
 
@@ -156,7 +159,7 @@
                 <div class="col-md-12" >
                     <header>
                         <h1>Constraints</h1>
-                        <h2><a href="#parallax">Back to top</a></h2>
+                        <h2><a href="#top">Back to top</a></h2>
                     </header>
                 </div>
 
@@ -169,7 +172,7 @@
                 <div class="col-md-12" >
                     <header>
                         <h1>Key findings</h1>
-                        <h2><a href="#parallax">Back to top</a></h2>
+                        <h2><a href="#top">Back to top</a></h2>
                     </header>
                 </div>
 
@@ -201,7 +204,7 @@
                     
                     <strong>Do you think playing games improves or worsens your marks?</strong><br><br>
                     
-                    <img src="img/piemarks.png"><br><br>
+                    <img src="img/piemarks.png" alt="Pie chart" class="img"><br><br>
                     
                     <strong>One short answer question in my survey was "Why do you think playing games makes your marks worse/better?"<br>Following are some student responses.</strong><br><br>
                     
@@ -270,7 +273,7 @@
                 <div class="col-md-12" >
                     <header>
                         <h1>Conclusion</h1>
-                        <h2><a href="#parallax">Back to top</a></h2>
+                        <h2><a href="#top">Back to top</a></h2>
                     </header>
                 </div>
 
@@ -283,7 +286,7 @@
                 <div class="clearfix"></div>
             </section>
         </div>
-    </div>
+
 
         <div id="footer">
             <div class="logo">
@@ -296,7 +299,7 @@
                 </p>
             </div>
         </div>
-
+    </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -306,6 +309,8 @@
     <script src="js/rellax.min.js"></script>
     <script src="js/scrollnav.js"></script>
     <script src="js/smoothscroll.js"></script>
+    <script src="js/backtotop.js"></script>
+    <script src="js/headtofoot.js"></script>
     <script>
         var rellax = new Rellax('.rellax', {
             // center: true
