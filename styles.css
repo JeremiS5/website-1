@@ -1,0 +1,304 @@
+/* GENERAL STYLES */
+
+.container,
+.container-fluid {
+    background-image:url(img/bg/topography.png);
+    background-attachment: fixed;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-top: 100vh;
+    z-index: 10;
+    margin-bottom: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+.body {
+    background-image:url(img/bg/topography.png);
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+[class*="col-"] {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.col-md-12 {
+    padding: 0;
+}
+
+.contentpage {
+    min-height: 80vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: #f9f9f9;
+    border-left: 20px solid #FF4B3B;
+    border-right: 20px solid #FF4B3B;
+    border-bottom: 20px solid #FF4B3B;
+    box-shadow: 20px 20px 10px rgba(0,0,0,0.2);
+}
+
+.imgpage {
+    border-top: 20px solid #FF4B3B;
+}
+
+/* END GENERAL STYLES */
+
+/* TEXT STYLES */
+
+.fancy {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5em;
+    font-weight: 800;
+    color: #efefef;
+    text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+    margin-bottom: 0;
+    /*text-shadow: -0.05em 0 0 #F22613,  0.05em 0 0 #00FFFF;*/
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 3pt;
+    color: #efefef;
+    text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+li a,
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    border-bottom: 1px solid white;
+}
+
+.opinion {
+    font-size: 0.8em;
+    padding-bottom: 5px;
+    font-weight: bold;
+    background-color: #fff;
+    border-left: 15px solid #FF4B3B;
+    border-right: 5px solid #FF4B3B;
+    padding-left: 10px;
+    width: 100%;
+}
+
+h2 a {
+    color: white;
+    text-decoration: none;
+}
+
+/* END TEXT STYLES */
+
+
+/******************************************************/
+
+
+/* HERO/COVER PAGE */
+
+#parallax {
+    overflow: hidden;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+}
+
+.parallaximg {
+    filter: brightness(50%) blur(3px) contrast(80%);
+    width: 110%;
+    position: relative;
+    top: -25%;
+    left: -5%;
+}
+
+.mainhead {
+    color: #fff;
+    text-shadow: 3px 3px #FF4B3B, 10px 10px 10px rgba(0, 0, 0, 0.5);
+    font-size: 5em;
+    line-height: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.imgtxt {
+    letter-spacing: .5em;
+    color: white;
+    font-size: 18pt;
+    background-color: rgba(0, 0, 0, 0.0);
+    text-shadow: 5px 5px 10px rgba(0,0,0,1);
+    margin-top: 20px;
+}
+
+.parawrap {
+    z-index: 1;
+    position: fixed;
+    top: 40%;
+}
+
+#parallax.past-main {
+    display: none;
+}
+
+/* END HERO/COVER PAGE*/
+
+
+/* MAIN TEXT SECTIONS */
+
+/* HEADER */
+
+header {
+    color: white;
+    text-align: center;
+    background: #FF4B3B;
+    margin: 0;
+    margin-left: -1px;
+    padding: 3% 1% 5%;
+    width: 101%;
+    z-index: 2;
+    clip-path: polygon(
+    0 0,
+    300% -0%,
+    50% 100%,
+    0% 80%
+    );
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* END HEADER */
+
+/* BODY TEXT */
+
+.bodypg {
+    line-height: 1.6em;
+    letter-spacing: 0.5pt;
+    z-index: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    padding: 3em;
+}
+
+.blockquote {
+    border-left: 15px solid #FF4B3B;
+    border-right: 15px solid #FF4B3B;
+    background-color: white;
+    z-index: -5;
+    color: #666;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.blockquote, footer {
+    border-left: 15px solid #FF4B3B;
+    border-right: 15px solid #FF4B3B;
+    background-color: white;
+    color: #666;
+    padding-left: 10px;
+    font-size: .75em;
+    z-index: -6;
+}
+
+/* END BODY TEXT */
+
+
+/* IMAGES */
+
+.img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-left: 15px solid #FF4B3B;
+    border-right: 15px solid #FF4B3B;
+}
+
+.contentimg {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+/* END IMAGES */
+
+
+/* END MAIN TEXT SECTIONS */
+
+
+/* FOOTER */
+
+.footer {
+    /*background-color: #FF4B3B;*/
+    color: white;
+}
+
+#footer {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    display: none;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -10;
+    background-image: url(img/bg/lozenge.png);
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+#footer.past-main {
+    display: block;
+}
+
+.logo {
+    margin-top: 40vh;
+    margin-bottom: 20vh;
+    text-align: center;
+    color: #fff;
+}
+
+.tagline {
+    font-size: 3em;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+}
+
+.tagline span {
+    color: #E2B45C;
+}
+
+.logo p {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.contact a {
+    color: white;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* END FOOTER */

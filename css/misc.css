@@ -1,0 +1,216 @@
+/* SCROLL INDICATOR */
+
+.chevcont {
+    position: absolute;
+    top: 85vh;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    z-index: 30;
+}
+.chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+.chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+.chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+.chevron:before,
+.chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+}
+.chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+@keyframes move {
+    25% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+.text {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Open Sans" sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+}
+@keyframes pulse {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* END SCROLL INDICATOR */
+
+/* NAVBAR */
+
+.navbar {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    outline: none;
+    border-radius: 0;
+    position: fixed;
+    z-index: 11;
+    width: 100%;
+    margin-top: 0;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+}
+
+.navbar-fixed-top .navbar-nav>li>a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.navbar-fixed-top .navbar-nav>li>a:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.nav .open>a, .nav .open>a:focus{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.dropdown-menu, .dropdown-menu>li>a {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: white;
+}
+
+.navbar-header {
+    display: none;
+}
+
+.navbar-header>a {
+    color: white;
+    font-size: 16pt;
+}
+
+.nav-up {
+    top: -50px;
+    /* same as header height. use variables in LESS/SASS */
+}
+
+nav li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.navbar .nav>li>a {
+    color: white;
+}
+
+.navbar-right {
+    margin-right: 0px;
+}
+
+.SearchIcon {
+    color: #fff;
+}
+
+.SearchButton {
+    background-color: transparent;
+    border-radius: 0px;
+    height: 50px;
+    width: 50px
+}
+
+.SearchButton:hover {
+    background-color: #fff;
+}
+
+.SearchButton:hover>.SearchIcon {
+    color: #000;
+}
+
+.SearchBar {
+    background: transparent;
+    border-radius: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0px;
+    height: 50px;
+    color: white;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-style: italic;
+}
+
+.input-group {
+    width: 50%;
+    top: 0px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* END NAVBAR */
+
+/* BACK TO TOP BUTTON */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 0px; /* Place the button at the bottom of the page */
+    right: 0px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #FF4B3B; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 3.3vh; /* Some padding */
+    animation: .5s slideInUp;
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* END BACK TO TOP BUTTON */

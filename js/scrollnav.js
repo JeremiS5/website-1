@@ -36,36 +36,3 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
-
-
-
-
-
-// changes the navbar colour when user scrolls
-$(function () {
-  $(document).scroll(function () {
-    var $nav = $(".navbar-fixed-top");
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-  });
-});
-
-
-
-
-
-
-// get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
-var mainbottom = $('.parallax').offset().top + $('.parallax').height();
-
-// on scroll, 
-$(window).on('scroll',function(){
-
-    // we round here to reduce a little workload
-    stop = Math.round($(window).scrollTop());
-    if (stop > mainbottom) {
-        $('.navbar').addClass('past-main');
-    } else {
-        $('.navbar').removeClass('past-main');
-   }
-
-});
